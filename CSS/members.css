@@ -1,0 +1,235 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card {
+    position: relative;
+    width: 250px;
+    height: 90px;
+    background: #fff;
+    border-radius: 10px;
+    /* box-shadow: 0 35px 80px rgba(0,0,0,0.5); */
+    transition: 0.5s;
+    margin-left: 10px;
+
+}
+
+.card:hover {
+    height: 350px;
+}
+
+.imgBx {
+    position: absolute;
+    left: 50%;
+    top: -50px;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.card:hover .imgBx {
+    width: 150px;
+    height: 150px;
+}
+
+.imgBx img {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .contents {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.card .contents .details {
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    transition: 0.5s;
+    transform: translateY(120px);
+}
+
+.card:hover .contents .details {
+    transform: translateY(0px);
+}
+
+.card .contents .details h2 {
+    font-size: 1em;
+    font-weight: 600;
+    color: #555;
+    line-height: 1em;
+}
+
+.card .contents .details h2 span {
+    font-size: 0.8em;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+.card .contents .details .data {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.card .contents .details .data h3 {
+    font-size: 0.9em;
+    color: #555;
+    line-height: 1em;
+    font-weight: 600;
+}
+
+.card .contents .details h3 span {
+    font-size: 0.8em;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+.card .contents .details .actionBtn {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card .contents .details .actionBtn button {
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 0.8em;
+    font-weight: 500;
+    background: #ff5f95;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+.card .contents .details .actionBtn button:nth-child(2) {
+    border: 1px solid #999;
+    color: #999;
+    background: #fff;
+}
+
+.modal, .modal2, .modal3, .modal4, .modal5 {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.35);
+    display: none;
+}
+
+.modal.open, .modal2.open, .modal3.open, .modal4.open, .modal5.open {
+    display: flex;
+}
+
+.wraper {
+    width: 80%;
+    height: 550px;
+    display: inline-block;
+    margin: 50px 10%;
+    box-shadow: 0 27px 87px rgba(0,0,0,0.5);
+    border-radius: 25px;
+    overflow: hidden;
+    background: linear-gradient(45deg, #ffffff , #f3ccd8);
+    animation: modalFadeIn ease 0.5s;
+    position: relative;
+}
+
+.modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #555;
+    padding: 12px;
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.wraper .wraper-img {
+    width: 45%;
+    height: 100vh;
+    float: left;
+    object-fit: cover;
+}
+
+.wraper .wraper-img img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.wraper-text {
+    float: left;
+    width: 55%;
+    padding: 60px 60px 30px 60px;
+}
+
+.wraper .wraper-text h1 {
+    margin-bottom: 30px;
+    font-size: 48px;
+    font-weight: bold;
+    color: #2e2e2e;
+}
+
+.wraper .wraper-text p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #2e2e2e;
+    line-height: 30px;
+    letter-spacing: 0.25px;
+    margin-bottom: 30px;
+}
+
+.wraper .social a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(to left, #ff3f43 , #ff5f95);
+    border-radius: 50%;
+    color: #fff;
+    font-size: 24px;
+    line-height: 45px;
+    text-align: center;
+    margin: 0 15px 0 0;
+    text-decoration: none;
+    transition: all ease 0.5s;
+}
+
+.wraper .social a:hover {
+    transform: rotate(360deg);
+}
+
+@keyframes modalFadeIn {
+    from {
+        transform: translateX(-140px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}

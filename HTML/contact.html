@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact-box</title>
+    <link rel="stylesheet" href="../CSS/contact.css">
+    <link rel="stylesheet" href="../CSS/main.css">
+</head>
+<body>
+    <script>
+        window.addEventListener('scroll', function(){
+            const header = document.querySelector('header');
+            header.classList.toggle("sticky", window.scrollY > 0);
+        });
+    </script>
+    <header>
+        <a href="#" class="logo">VietNam Food<span>.</span></a>
+        <ul class="navigation">
+            <li><a href="../HTML/Main.html">Home</a></li>
+            <li><a href="../HTML/menu.html">Menu</a></li>
+            <li><a href="../HTML/customer.html">Customer</a></li>
+            <li><a href="../HTML/contact.html">Contact</a></li>
+            <li><a href="../HTML/member_profile_card.html">Group Members</a></li>
+            <li><a href="../HTML/login.html">Log in/Sign up</a></li>
+        </ul>
+    </header>
+    <div id="contact">
+    <div class="contact">
+        <form action="" >
+                 <h2>Contact to Nhom2</h2>
+                 <input type="text" class="in" placeholder="Your name" required>
+                 <input type="email" class="in" placeholder="Your email" required>
+                 <input type="text" class="in" placeholder="Subject">
+                 <textarea name="" class="in inr" cols="30" rows="10" placeholder="Your message"></textarea>
+                 <input type="submit" class="bt" value="Send Message">
+           
+        </form>
+    </div>
+</div>
+    <footer class="footer">
+        <div class="contai">
+
+            <div class="row">
+                <div class="col">
+                    <h4>Group Members</h4>
+                    <ul>
+                        <li>Le Chi Cuong</li>
+                        <li>Dang Huu Tri</li>
+                      
+                        <li>Phan Luong Tung Chanh</li>
+                        <li>Ho Long Vu</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h4>ID Members</h4>
+                    <ul>
+                        <li>2004001</li>
+                        <li>21109451</li> 
+                       
+                        <li>20060681</li>
+                        <li>20106601</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h4>Address Us</h4>
+                    <ul>
+
+                        <li>12, Nguyen Van Bao,P4,Go Vap, Tp. Ho Chi Minh</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h4>Get Help</h4>
+                    <ul>
+                        <li>FAQ</li>
+                        <li>Shipping</li>
+                        
+                        <li>Payment Options</li>
+                        <li>Orther Status</li>
+                    </ul>
+                </div>
+
+            </div>
+            
+
+        </div>
+</footer>
+
+    
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VietNam Food</title>
+    <link rel="stylesheet" href="../CSS/main.css" />
+  </head>
+  <body>
+    <script>
+      window.addEventListener("scroll", function () {
+        const header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+      });
+    </script>
+    <script>
+      $(document).ready(function(){
+          function kiemtra(){
+          let hoten = $("#hoten").val;
+          let soluong= $("#soluong").val;
+          let phone =$("#phone").val;
+          if(hoten.trim()=="" || soluong.trim()=="" || phone.trim()==""){
+              error.html("Phải nhập đầy chứ!");
+              return false;
+          }
+          error.html("(*)");
+          return true;
+          if(!soluong >= 1){
+              error3.html("Số lượn phải ít nhất là 1");
+              return false; 
+          }
+          error3.html("(*)");
+          return true;
+      }
+      $("#txtmon").change(function(){
+         let mon = $("#txtmon").val();
+         let gia = mon == "Hot Vit Lon Dac Biet" ? 5000 : (mon=="Banh Mi Dac Biet" ? 20000 : 100000 )
+         $("#txtgia").val(gia);
+      })
+      $("#dat").click(function(){
+          if(!kiemtra()){
+              return false;
+          }
+          let ngaydat = $("#ngay").val;
+          let dichvu = $("#dichvu").val;
+          let danhgia = $("#ghichu").val;
+          let tongtien = soluong * mon;
+          console.log("Menu bạn đã đặt\n"+hoten+"\n"+phone+"\n"+ngaydat+"\n"+soluong+"\n"+mon+"\n"+gia+"\n"+dichvu+"\n"+danhgia+"\n"+tongtien);
+      })
+      });
+  </script>
+    <header>
+      <a href="#" class="logo">VietNam Food<span>.</span></a>
+      <ul class="navigation">
+        <li><a href="../HTML/Main.html">Home</a></li>
+        <li><a href="../HTML/menu.html">Menu</a></li>
+        <li><a href="../HTML/customer.html">Customer</a></li>
+        <li><a href="../HTML/contact.html">Contact</a></li>
+        <li><a href="../HTML/member_profile_card.html">Group Members</a></li>
+        <li><a href="../HTML/login.html">Log in/Sign up</a></li>
+      </ul>
+    </header>
+
+    <section class="banner" id="banner">
+      <div class="content">
+        <div class="tong">
+          <div id="myModal" class="modal">
+              <div class="modal-content" style="width:400px;margin-left:500px">
+                  <form action="#">
+                      <h2 style="margin: 20px;">Thông tin người đặt</h2><br>
+                      Họ tên người đặt:<span id="error" style="color: red;">*</span><br>
+                      <input id="hoten" style="margin:0px 20px;width: 350px;" type="text" placeholder="Họ tên"><br>
+                      Điện thoại liên hệ :<span id="error1" style="color: red;">*</span><br>
+                      <input type="text" id="phone" style="margin:0px 20px;width: 350px;" placeholder="Điện thoại"><br>
+                      Ngày đặt món :<span id="error2" style="color: red;">*</span><br>
+                      <input id="ngay" style="margin:0px 20px;width: 350px;" type="date"><br>
+                      Số lượng:<span id="error3" style="color: red;">*</span><br>
+                      <input id="soluong" style="margin:0px 20px;width: 350px;" type="text"><br>
+                      Món chọn :<span id="error4" style="color: red;">*</span><br>
+                      <select id="txtmon" style="margin:0px 20px;width: 355px;">
+                          <option value="Hot Vit Lon Dac Biet"> Hot Vit Lon Dac Biet</option>
+                          <option value="Banh Mi Dac Biet">Banh Mi Dac Biet</option>
+                          <option value="Pho Dac Biet">Pho Dac Biet</option>
+                          <option value="Banh Xeo Dac Biet">Banh Xeo Dac Biet</option>
+                          <option value="Banh Chung Dac Biet">Banh Chung Dac Biet</option>
+                          <option value="Goi Cuon Dac Biet">Goi Cuon Dac Biet</option>
+                      </select><br>
+                      Gía: <input id="txtgia" style="margin:0px 20px;width: 350px;" type="text" value="5000" readonly><br>
+                      Dịch vụ đi kèm:<input id="dichvu" type="checkbox">Ship tới tận nhà<br>
+                      Đánh Giá:<br><textarea id="ghichu" style="margin:0px 20px;" rows="2" cols="48" placeholder="Ngon quá đi mất"></textarea><br>
+                      <input type="button" id="dat" style="margin:0px 20px;width: 360px;background-color: aquamarine;" value="Đặt"><br>
+                      <p style="color:brown;text-align: right;">Hot line 1900 6005</p>                
+                  </form>
+              </div>
+          </div>
+      </div>
+      </div>
+    </section>
+
+
+    <footer class="footer">
+      <div class="contai">
+        <div class="row">
+          <div class="col">
+            <h4>Group Members</h4>
+            <ul>
+              <li>Le Chi Cuong</li>
+              <li>Dang Huu Tri</li>
+             
+              <li>Phan Luong Tung Chanh</li>
+              <li>Ho Long Vu</li>
+            </ul>
+          </div>
+          <div class="col">
+            <h4>ID Members</h4>
+            <ul>
+              <li>2004001</li>
+              <li>21109451</li>
+             
+              <li>20060681</li>
+              <li>20106601</li>
+            </ul>
+          </div>
+          <div class="col">
+            <h4>Address Us</h4>
+            <ul>
+              <li>12, Nguyen Van Bao,P4,Go Vap, Tp. Ho Chi Minh</li>
+            </ul>
+          </div>
+          <div class="col">
+            <h4>Get Help</h4>
+            <ul>
+              <li>FAQ</li>
+              <li>Shipping</li>
+              
+              <li>Payment Options</li>
+              <li>Orther Status</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

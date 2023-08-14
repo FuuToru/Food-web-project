@@ -1,0 +1,289 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;1,400&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Playfair Display", serif;
+  scroll-behavior: smooth;
+}
+
+/* body {
+    height: 2000px;
+} */
+
+p {
+  font-weight: 300;
+  color: #111;
+}
+
+.container {
+  position: relative;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(../IMG/bg1.jpg);
+  background-size: cover;
+}
+
+.banner .content {
+  max-width: 900px;
+  text-align: center;
+}
+
+.banner .content h2 {
+  font-size: 80px;
+  color: #fff;
+}
+
+.banner .content p {
+  font-size: 16px;
+  color: #fff;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s;
+}
+
+header .logo {
+  color: #fff;
+  font-weight: 1000;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+header.sticky {
+  background: #fff;
+  padding: 10px 100px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+header.sticky .logo {
+  color: #000;
+}
+
+header.sticky .navigation li a {
+  color: #000;
+}
+
+header .logo span {
+  color: #ff0157;
+}
+
+header .navigation {
+  position: relative;
+  display: flex;
+}
+
+header .navigation li {
+  list-style: none;
+  margin-left: 20px;
+}
+
+header .navigation li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 300;
+}
+
+header .navigation li a:hover {
+  color: #ff0157;
+}
+
+header .logo:hover {
+  color: #ff0157;
+  transition: 1s;
+  font-size: 28px;
+}
+
+section {
+  padding: 100px;
+}
+
+.row {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.row .half-col {
+  position: relative;
+  width: 48%;
+}
+
+.text {
+  color: #000;
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.text span {
+  font-size: 64px;
+  color: #ff0157;
+}
+
+.row .half-col .imgBox {
+  position: relative;
+  width: 100%;
+  min-height: 300px;
+}
+
+.row .half-col .imgBox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.menu .content {
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.menu .content .box {
+  width: 300px;
+  margin: 20px;
+  border: 10px solid #fff;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05);
+}
+
+.menu .content .box .imgBox {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+
+.menu .content .box .imgBox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* .menu .content .box:hover{
+
+    transform:  scale(1.2);
+    transition: 0.8s;
+    cursor: pointer;
+} */
+
+.text-food {
+  padding: 5px 0 5px;
+}
+
+.btn-buy {
+  text-decoration: none;
+  color: #fff;
+}
+
+.btn {
+  font-size: 16px;
+  color: #fff;
+  background: #ff0157;
+  display: inline-block;
+  padding: 10px 30px;
+  margin-top: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  letter-spacing: 4px;
+  cursor: pointer;
+}
+
+.menu .content .box .text-food h3 {
+  color: #111;
+  font-weight: 300;
+}
+.footer {
+  background-color: #24262b;
+  padding: 50px 10%;
+}
+.contai {
+  max-width: 1170px;
+}
+.row {
+  display: flex;
+}
+ul {
+  list-style: none;
+}
+.col {
+  width: 25%;
+  padding: 0 15px;
+}
+.col h4 {
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 30px;
+  font-weight: 500;
+  position: relative;
+}
+.col h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  width: 50px;
+}
+.col ul li {
+  margin-bottom: 10px;
+  color: #fff;
+}
+.col ul li:hover {
+  padding-left: 8px;
+  cursor: pointer;
+}
+
+.price {
+  display: flex;
+  color: #e99b1e;
+  font-size: 1.5rem;
+  margin-top: 4px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.info {
+  margin-top: 5px;
+  color: #e91e63;
+}
+.star img {
+  width: 30px;
+  height: 30px;
+  margin-top: 7px;
+}

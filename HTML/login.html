@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.4.1.min.js"></script>		
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js" type="text/javascript"></script>
+    <script src="demoValidation.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="../CSS/login.css">
+	<link rel="stylesheet" href="../CSS/main.css">
+	<style>
+		label.error{
+			color: red;
+			margin-top: -20px;
+		}
+		.decorate{
+			transform: translateY(-15px);
+	        color: cyan;
+		}
+	</style>
+</head>
+<body>
+	<script>
+        $().ready(function() {
+            $("#demoForm").validate({
+                onfocusout: false,
+                onkeyup: false,
+                onclick: false,
+                rules: {
+                    "name": {
+                        required: true,
+                        minlength: 5
+                    },
+                    "password": {
+                        required: true,
+                        minlength: 8
+                    },
+                    "re-password": {
+                        equalTo: "#password",
+                        minlength: 8
+                    },
+                    "email": {
+                        required: true,
+                        email: true
+                    },
+
+                },
+				
+        });
+
+		$(document).ready(function(){
+			$("#submit-btn").click(function()
+			{
+				$(".deco").addClass("decorate");
+				
+			})
+		})
+            });
+    
+
+		
+			window.addEventListener('scroll', function(){
+				const header = document.querySelector('header');
+				header.classList.toggle("sticky", window.scrollY > 0);
+			});
+    </script>
+	
+	<header>
+		<a href="../HTML/Main.html" class="logo">VietNam Food<span>.</span></a>
+		<ul class="navigation">
+			<li><a href="../HTML/Main.html">Home</a></li>
+			<li><a href="../HTML/menu.html">Menu</a></li>
+			<li><a href="../HTML/customer.html">Customer</a></li>
+			<li><a href="../HTML/contact.html">Contact</a></li>
+			<li><a href="../HTML/member_profile_card.html">Group members</a></li>
+			<li><a href="../HTML/login.html">Log in/Sign up</a></li>
+		</ul>
+	</header>
+	
+	<div class="login-page">
+		<form action="" class="form">
+			<h2>Log in</h2>
+			<div class="input-group">
+				<input type="text" name="loginuser" id="loginuser" required>
+				<label for="loginuser" class="deco">User name</label>
+			</div>
+			<div class="input-group">
+				<input type="password" name="loginpass" id="loginpass" required>
+				<label for="loginpass" class="deco">Password</label>
+			</div>
+			<input type="submit" value="Log in" class="submit-btn"><br/><br/>
+			<a href="#forgot-pass" class="forgot-pass">Forgot?</a> <br/>
+			<a href="#register" class="register">Sign up</a>
+		</form>
+		
+		<div id="forgot-pass">
+			<form action="" class="form">
+				<a href="#" class="close">&times;</a>
+				<h2>Forgot-password</h2>
+				<div class="input-group">
+					<input type="email" name="email" id="email" required>
+					<label for="email" class="deco">Email</label>
+				</div>
+				<input type="submit" value="Submit" class="submit-btn">
+			</form>
+		</div>
+        
+        <div id="register">
+            <form action="" class="form" id="demoForm" method="get">
+				<a href="#" class="close">&times;</a>
+				<h2>Sign up</h2>
+				
+					<div class="input-group">
+						<input type="text" name="name" id="loginuser" required>
+						<label for="loginuser" class="deco">User name</label>	
+					</div>
+					<div class="input-group">
+						<input type="password" name="password" id="loginpass" required>
+				<label for="loginpass" class="deco">Password</label>
+					</div>
+					
+					<div class="input-group">
+						<input type="password" name="re-password" id="re-loginpass" required>
+				<label for="re-loginpass" class="deco">Re-password</label>
+					</div>
+					<div class="input-group">
+						<input type="email" name="email" id="email" required>
+					   <label for="email" class="deco">Email</label>
+					</div>
+
+					<input type="submit" value="Sign up" class="submit-btn" id="submit-btn">
+				</form>
+
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="contai">
+
+			<div class="row">
+				<div class="col">
+					<h4>Group Members</h4>
+					<ul>
+						<li>Le Chi Cuong</li>
+						<li>Dang Huu Tri</li>
+						
+						<li>Phan Luong Tung Chanh</li>
+						<li>Ho Long Vu</li>
+					</ul>
+				</div>
+				<div class="col">
+					<h4>ID Members</h4>
+					<ul>
+						<li>2004001</li>
+						<li>21109451</li> 
+						
+						<li>20060681</li>
+						<li>20106601</li>
+					</ul>
+				</div>
+				<div class="col">
+					<h4>Address Us</h4>
+					<ul>
+
+						<li>12, Nguyen Van Bao,P4,Go Vap, Tp. Ho Chi Minh</li>
+					</ul>
+				</div>
+				<div class="col">
+					<h4>Get Help</h4>
+					<ul>
+						<li>FAQ</li>
+						<li>Shipping</li>
+						
+						<li>Payment Options</li>
+						<li>Orther Status</li>
+					</ul>
+				</div>
+
+			</div>
+			
+
+		</div>
+</footer>
+
+</body>
+</html>
+</body>
+</html>
