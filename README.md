@@ -1,2 +1,2 @@
 # Final-Project-web-iuh
-# link deploy : food-travel.netlify.app
+# link deploy : https://food-travel.netlify.app/
